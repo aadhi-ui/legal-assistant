@@ -1,0 +1,167 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  background: var(--primary-white);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1000;
+  box-shadow: var(--shadow-light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin: 0;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  color: var(--primary-blue);
+}
+
+.navLink.active {
+  color: var(--primary-blue);
+}
+
+.navLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--primary-blue);
+}
+
+.legalAssistantButton {
+  background: #eff6ff;
+  color: var(--primary-blue);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.legalAssistantButton:hover {
+  background: #dbeafe;
+  transform: translateY(-1px);
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.languageButton {
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: var(--text-dark);
+}
+
+.languageButton:hover {
+  border-color: var(--primary-blue);
+  background: var(--background-light);
+  color: var(--primary-blue);
+}
+
+.languageButton i {
+  font-size: 0.9rem;
+}
+
+.languageButton i {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.languageButton:hover i {
+  transform: rotate(180deg);
+}
+
+.getHelpButton {
+  background: var(--primary-blue);
+  color: var(--primary-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.getHelpButton:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+@media (max-width: 1024px) {
+  .navLinks {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+    height: 60px;
+  }
+  
+  .logo h1 {
+    font-size: 1.25rem;
+  }
+  
+  .navLinks {
+    display: none;
+  }
+  
+  .rightSection {
+    gap: 0.5rem;
+  }
+  
+  .languageButton {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .getHelpButton {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
